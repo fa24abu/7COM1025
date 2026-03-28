@@ -1,28 +1,14 @@
 package flc.model;
 
 public class Member {
+    private int id;
+    private String name;
 
-    private final int memberId;
-    private final String name;
-
-    public Member(int memberId, String name) {
-        this.memberId = memberId;
+    public Member(int id, String name) {
+        this.id = id;
         this.name = name;
     }
 
-    public int getMemberId() {
-        return memberId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public String toString() {
-        return "Member{" +
-                "id=" + memberId +
-                ", name='" + name + '\'' +
-                '}';
-    }
+    public int getId() { return id; }
+    public String getName() { return name; }
 }
