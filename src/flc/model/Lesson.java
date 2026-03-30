@@ -9,16 +9,18 @@ public class Lesson {
     private DayType day;
     private TimeSlot slot;
     private double price;
+    private int month;
     private int capacity = 4;
 
     private List<Booking> bookings = new ArrayList<>();
 
-    public Lesson(int id, ExerciseType type, DayType day, TimeSlot slot, double price) {
+    public Lesson(int id, ExerciseType type, DayType day, TimeSlot slot, double price, int month) {
         this.id = id;
         this.type = type;
         this.day = day;
         this.slot = slot;
         this.price = price;
+        this.month = month;
     }
 
     public boolean hasSpace() {
@@ -33,6 +35,7 @@ public class Lesson {
     public int getId() { return id; }
     public ExerciseType getType() { return type; }
     public DayType getDay() { return day; }
+    public int getMonth() { return month; }
     public TimeSlot getSlot() { return slot; }
     public double getPrice() { return price; }
 }
