@@ -26,75 +26,61 @@ public class DataInitializer {
     }
 
     public static void createLessons(TimeTableService ts) {
-        // Month 1: Weekends 1-4
-        int month = 1;
+        ts.addLesson(new Lesson(1, ExerciseType.ZUMBA, DayType.SATURDAY, TimeSlot.MORNING, 12, 1));
+        ts.addLesson(new Lesson(2, ExerciseType.AQUACISE, DayType.SATURDAY, TimeSlot.AFTERNOON, 14, 1));
+        ts.addLesson(new Lesson(3, ExerciseType.BOXFIT, DayType.SATURDAY, TimeSlot.EVENING, 16, 1));
+        ts.addLesson(new Lesson(4, ExerciseType.BODYBLITZ, DayType.SUNDAY, TimeSlot.MORNING, 18, 1));
+        ts.addLesson(new Lesson(5, ExerciseType.YOGA, DayType.SUNDAY, TimeSlot.AFTERNOON, 10, 1));
+        ts.addLesson(new Lesson(6, ExerciseType.ZUMBA, DayType.SUNDAY, TimeSlot.EVENING, 12, 1));
 
-        // Weekend 1
-        ts.addLesson(new Lesson(1, ExerciseType.ZUMBA, DayType.SATURDAY, TimeSlot.MORNING, 12, month));
-        ts.addLesson(new Lesson(2, ExerciseType.AQUACISE, DayType.SATURDAY, TimeSlot.AFTERNOON, 14, month));
-        ts.addLesson(new Lesson(3, ExerciseType.BOXFIT, DayType.SATURDAY, TimeSlot.EVENING, 16, month));
-        ts.addLesson(new Lesson(4, ExerciseType.BODYBLITZ, DayType.SUNDAY, TimeSlot.MORNING, 18, month));
-        ts.addLesson(new Lesson(5, ExerciseType.YOGA, DayType.SUNDAY, TimeSlot.AFTERNOON, 10, month));
-        ts.addLesson(new Lesson(6, ExerciseType.ZUMBA, DayType.SUNDAY, TimeSlot.EVENING, 12, month));
+        ts.addLesson(new Lesson(7, ExerciseType.AQUACISE, DayType.SATURDAY, TimeSlot.MORNING, 14, 1));
+        ts.addLesson(new Lesson(8, ExerciseType.BOXFIT, DayType.SATURDAY, TimeSlot.AFTERNOON, 16, 1));
+        ts.addLesson(new Lesson(9, ExerciseType.BODYBLITZ, DayType.SATURDAY, TimeSlot.EVENING, 18, 1));
+        ts.addLesson(new Lesson(10, ExerciseType.YOGA, DayType.SUNDAY, TimeSlot.MORNING, 10, 1));
+        ts.addLesson(new Lesson(11, ExerciseType.ZUMBA, DayType.SUNDAY, TimeSlot.AFTERNOON, 12, 1));
+        ts.addLesson(new Lesson(12, ExerciseType.AQUACISE, DayType.SUNDAY, TimeSlot.EVENING, 14, 1));
 
-        // Weekend 2
-        ts.addLesson(new Lesson(7, ExerciseType.AQUACISE, DayType.SATURDAY, TimeSlot.MORNING, 14, month));
-        ts.addLesson(new Lesson(8, ExerciseType.BOXFIT, DayType.SATURDAY, TimeSlot.AFTERNOON, 16, month));
-        ts.addLesson(new Lesson(9, ExerciseType.BODYBLITZ, DayType.SATURDAY, TimeSlot.EVENING, 18, month));
-        ts.addLesson(new Lesson(10, ExerciseType.YOGA, DayType.SUNDAY, TimeSlot.MORNING, 10, month));
-        ts.addLesson(new Lesson(11, ExerciseType.ZUMBA, DayType.SUNDAY, TimeSlot.AFTERNOON, 12, month));
-        ts.addLesson(new Lesson(12, ExerciseType.AQUACISE, DayType.SUNDAY, TimeSlot.EVENING, 14, month));
+        ts.addLesson(new Lesson(13, ExerciseType.BOXFIT, DayType.SATURDAY, TimeSlot.MORNING, 16, 1));
+        ts.addLesson(new Lesson(14, ExerciseType.BODYBLITZ, DayType.SATURDAY, TimeSlot.AFTERNOON, 18, 1));
+        ts.addLesson(new Lesson(15, ExerciseType.YOGA, DayType.SATURDAY, TimeSlot.EVENING, 10, 1));
+        ts.addLesson(new Lesson(16, ExerciseType.ZUMBA, DayType.SUNDAY, TimeSlot.MORNING, 12, 1));
+        ts.addLesson(new Lesson(17, ExerciseType.AQUACISE, DayType.SUNDAY, TimeSlot.AFTERNOON, 14, 1));
+        ts.addLesson(new Lesson(18, ExerciseType.BOXFIT, DayType.SUNDAY, TimeSlot.EVENING, 16, 1));
 
-        // Weekend 3
-        ts.addLesson(new Lesson(13, ExerciseType.BOXFIT, DayType.SATURDAY, TimeSlot.MORNING, 16, month));
-        ts.addLesson(new Lesson(14, ExerciseType.BODYBLITZ, DayType.SATURDAY, TimeSlot.AFTERNOON, 18, month));
-        ts.addLesson(new Lesson(15, ExerciseType.YOGA, DayType.SATURDAY, TimeSlot.EVENING, 10, month));
-        ts.addLesson(new Lesson(16, ExerciseType.ZUMBA, DayType.SUNDAY, TimeSlot.MORNING, 12, month));
-        ts.addLesson(new Lesson(17, ExerciseType.AQUACISE, DayType.SUNDAY, TimeSlot.AFTERNOON, 14, month));
-        ts.addLesson(new Lesson(18, ExerciseType.BOXFIT, DayType.SUNDAY, TimeSlot.EVENING, 16, month));
+        ts.addLesson(new Lesson(19, ExerciseType.BODYBLITZ, DayType.SATURDAY, TimeSlot.MORNING, 18, 1));
+        ts.addLesson(new Lesson(20, ExerciseType.YOGA, DayType.SATURDAY, TimeSlot.AFTERNOON, 10, 1));
+        ts.addLesson(new Lesson(21, ExerciseType.ZUMBA, DayType.SATURDAY, TimeSlot.EVENING, 12, 1));
+        ts.addLesson(new Lesson(22, ExerciseType.AQUACISE, DayType.SUNDAY, TimeSlot.MORNING, 14, 1));
+        ts.addLesson(new Lesson(23, ExerciseType.BOXFIT, DayType.SUNDAY, TimeSlot.AFTERNOON, 16, 1));
+        ts.addLesson(new Lesson(24, ExerciseType.BODYBLITZ, DayType.SUNDAY, TimeSlot.EVENING, 18, 1));
 
-        // Weekend 4
-        ts.addLesson(new Lesson(19, ExerciseType.BODYBLITZ, DayType.SATURDAY, TimeSlot.MORNING, 18, month));
-        ts.addLesson(new Lesson(20, ExerciseType.YOGA, DayType.SATURDAY, TimeSlot.AFTERNOON, 10, month));
-        ts.addLesson(new Lesson(21, ExerciseType.ZUMBA, DayType.SATURDAY, TimeSlot.EVENING, 12, month));
-        ts.addLesson(new Lesson(22, ExerciseType.AQUACISE, DayType.SUNDAY, TimeSlot.MORNING, 14, month));
-        ts.addLesson(new Lesson(23, ExerciseType.BOXFIT, DayType.SUNDAY, TimeSlot.AFTERNOON, 16, month));
-        ts.addLesson(new Lesson(24, ExerciseType.BODYBLITZ, DayType.SUNDAY, TimeSlot.EVENING, 18, month));
+        ts.addLesson(new Lesson(25, ExerciseType.YOGA, DayType.SATURDAY, TimeSlot.MORNING, 10, 2));
+        ts.addLesson(new Lesson(26, ExerciseType.ZUMBA, DayType.SATURDAY, TimeSlot.AFTERNOON, 12, 2));
+        ts.addLesson(new Lesson(27, ExerciseType.AQUACISE, DayType.SATURDAY, TimeSlot.EVENING, 14, 2));
+        ts.addLesson(new Lesson(28, ExerciseType.BOXFIT, DayType.SUNDAY, TimeSlot.MORNING, 16, 2));
+        ts.addLesson(new Lesson(29, ExerciseType.BODYBLITZ, DayType.SUNDAY, TimeSlot.AFTERNOON, 18, 2));
+        ts.addLesson(new Lesson(30, ExerciseType.YOGA, DayType.SUNDAY, TimeSlot.EVENING, 10, 2));
 
-        // Month 2: Weekends 5-8
-        month = 2;
+        ts.addLesson(new Lesson(31, ExerciseType.ZUMBA, DayType.SATURDAY, TimeSlot.MORNING, 12, 2));
+        ts.addLesson(new Lesson(32, ExerciseType.AQUACISE, DayType.SATURDAY, TimeSlot.AFTERNOON, 14, 2));
+        ts.addLesson(new Lesson(33, ExerciseType.BOXFIT, DayType.SATURDAY, TimeSlot.EVENING, 16, 2));
+        ts.addLesson(new Lesson(34, ExerciseType.BODYBLITZ, DayType.SUNDAY, TimeSlot.MORNING, 18, 2));
+        ts.addLesson(new Lesson(35, ExerciseType.YOGA, DayType.SUNDAY, TimeSlot.AFTERNOON, 10, 2));
+        ts.addLesson(new Lesson(36, ExerciseType.ZUMBA, DayType.SUNDAY, TimeSlot.EVENING, 12, 2));
 
-        // Weekend 5
-        ts.addLesson(new Lesson(25, ExerciseType.YOGA, DayType.SATURDAY, TimeSlot.MORNING, 10, month));
-        ts.addLesson(new Lesson(26, ExerciseType.ZUMBA, DayType.SATURDAY, TimeSlot.AFTERNOON, 12, month));
-        ts.addLesson(new Lesson(27, ExerciseType.AQUACISE, DayType.SATURDAY, TimeSlot.EVENING, 14, month));
-        ts.addLesson(new Lesson(28, ExerciseType.BOXFIT, DayType.SUNDAY, TimeSlot.MORNING, 16, month));
-        ts.addLesson(new Lesson(29, ExerciseType.BODYBLITZ, DayType.SUNDAY, TimeSlot.AFTERNOON, 18, month));
-        ts.addLesson(new Lesson(30, ExerciseType.YOGA, DayType.SUNDAY, TimeSlot.EVENING, 10, month));
+        ts.addLesson(new Lesson(37, ExerciseType.AQUACISE, DayType.SATURDAY, TimeSlot.MORNING, 14, 2));
+        ts.addLesson(new Lesson(38, ExerciseType.BOXFIT, DayType.SATURDAY, TimeSlot.AFTERNOON, 16, 2));
+        ts.addLesson(new Lesson(39, ExerciseType.BODYBLITZ, DayType.SATURDAY, TimeSlot.EVENING, 18, 2));
+        ts.addLesson(new Lesson(40, ExerciseType.YOGA, DayType.SUNDAY, TimeSlot.MORNING, 10, 2));
+        ts.addLesson(new Lesson(41, ExerciseType.ZUMBA, DayType.SUNDAY, TimeSlot.AFTERNOON, 12, 2));
+        ts.addLesson(new Lesson(42, ExerciseType.AQUACISE, DayType.SUNDAY, TimeSlot.EVENING, 14, 2));
 
-        // Weekend 6
-        ts.addLesson(new Lesson(31, ExerciseType.ZUMBA, DayType.SATURDAY, TimeSlot.MORNING, 12, month));
-        ts.addLesson(new Lesson(32, ExerciseType.AQUACISE, DayType.SATURDAY, TimeSlot.AFTERNOON, 14, month));
-        ts.addLesson(new Lesson(33, ExerciseType.BOXFIT, DayType.SATURDAY, TimeSlot.EVENING, 16, month));
-        ts.addLesson(new Lesson(34, ExerciseType.BODYBLITZ, DayType.SUNDAY, TimeSlot.MORNING, 18, month));
-        ts.addLesson(new Lesson(35, ExerciseType.YOGA, DayType.SUNDAY, TimeSlot.AFTERNOON, 10, month));
-        ts.addLesson(new Lesson(36, ExerciseType.ZUMBA, DayType.SUNDAY, TimeSlot.EVENING, 12, month));
-
-        // Weekend 7
-        ts.addLesson(new Lesson(37, ExerciseType.AQUACISE, DayType.SATURDAY, TimeSlot.MORNING, 14, month));
-        ts.addLesson(new Lesson(38, ExerciseType.BOXFIT, DayType.SATURDAY, TimeSlot.AFTERNOON, 16, month));
-        ts.addLesson(new Lesson(39, ExerciseType.BODYBLITZ, DayType.SATURDAY, TimeSlot.EVENING, 18, month));
-        ts.addLesson(new Lesson(40, ExerciseType.YOGA, DayType.SUNDAY, TimeSlot.MORNING, 10, month));
-        ts.addLesson(new Lesson(41, ExerciseType.ZUMBA, DayType.SUNDAY, TimeSlot.AFTERNOON, 12, month));
-        ts.addLesson(new Lesson(42, ExerciseType.AQUACISE, DayType.SUNDAY, TimeSlot.EVENING, 14, month));
-
-        // Weekend 8
-        ts.addLesson(new Lesson(43, ExerciseType.BOXFIT, DayType.SATURDAY, TimeSlot.MORNING, 16, month));
-        ts.addLesson(new Lesson(44, ExerciseType.BODYBLITZ, DayType.SATURDAY, TimeSlot.AFTERNOON, 18, month));
-        ts.addLesson(new Lesson(45, ExerciseType.YOGA, DayType.SATURDAY, TimeSlot.EVENING, 10, month));
-        ts.addLesson(new Lesson(46, ExerciseType.ZUMBA, DayType.SUNDAY, TimeSlot.MORNING, 12, month));
-        ts.addLesson(new Lesson(47, ExerciseType.AQUACISE, DayType.SUNDAY, TimeSlot.AFTERNOON, 14, month));
-        ts.addLesson(new Lesson(48, ExerciseType.BOXFIT, DayType.SUNDAY, TimeSlot.EVENING, 16, month));
+        ts.addLesson(new Lesson(43, ExerciseType.BOXFIT, DayType.SATURDAY, TimeSlot.MORNING, 16, 2));
+        ts.addLesson(new Lesson(44, ExerciseType.BODYBLITZ, DayType.SATURDAY, TimeSlot.AFTERNOON, 18, 2));
+        ts.addLesson(new Lesson(45, ExerciseType.YOGA, DayType.SATURDAY, TimeSlot.EVENING, 10, 2));
+        ts.addLesson(new Lesson(46, ExerciseType.ZUMBA, DayType.SUNDAY, TimeSlot.MORNING, 12, 2));
+        ts.addLesson(new Lesson(47, ExerciseType.AQUACISE, DayType.SUNDAY, TimeSlot.AFTERNOON, 14, 2));
+        ts.addLesson(new Lesson(48, ExerciseType.BOXFIT, DayType.SUNDAY, TimeSlot.EVENING, 16, 2));
     }
 
     public static void seedBookingsAndReviews(
@@ -103,91 +89,86 @@ public class DataInitializer {
             BookingService bs,
             ReviewService rs) {
 
-        Booking b1 = bs.book(members.get(0), ts.getLessonById(1));
-        rs.addReview(b1, "Very satisfied", 5);
+        Booking[] bookings = new Booking[20];
 
-        Booking b2 = bs.book(members.get(1), ts.getLessonById(2));
-        rs.addReview(b2, "Satisfied", 4);
+        bookings[0] = bs.book(members.get(0), ts.getLessonById(1));
+        bookings[0].setStatus("attended");
+        rs.addReview(bookings[0], "Very satisfied", 5);
 
-        Booking b3 = bs.book(members.get(2), ts.getLessonById(3));
-        rs.addReview(b3, "Ok", 3);
+        bookings[1] = bs.book(members.get(1), ts.getLessonById(2));
+        bookings[1].setStatus("attended");
+        rs.addReview(bookings[1], "Satisfied", 4);
 
-        Booking b4 = bs.book(members.get(3), ts.getLessonById(4));
-        rs.addReview(b4, "Dissatisfied", 2);
+        bookings[2] = bs.book(members.get(2), ts.getLessonById(3));
+        bookings[2].setStatus("attended");
+        rs.addReview(bookings[2], "Ok", 3);
 
-        Booking b5 = bs.book(members.get(4), ts.getLessonById(5));
-        rs.addReview(b5, "Very dissatisfied", 1);
+        bookings[3] = bs.book(members.get(3), ts.getLessonById(4));
+        bookings[3].setStatus("attended");
+        rs.addReview(bookings[3], "Dissatisfied", 2);
 
-        Booking b6 = bs.book(members.get(5), ts.getLessonById(6));
-        rs.addReview(b6, "Very satisfied", 5);
+        bookings[4] = bs.book(members.get(4), ts.getLessonById(5));
+        bookings[4].setStatus("attended");
+        rs.addReview(bookings[4], "Very dissatisfied", 1);
 
-        Booking b7 = bs.book(members.get(6), ts.getLessonById(7));
-        rs.addReview(b7, "Satisfied", 4);
+        bookings[5] = bs.book(members.get(5), ts.getLessonById(6));
+        bookings[5].setStatus("attended");
+        rs.addReview(bookings[5], "Very satisfied", 5);
 
-        Booking b8 = bs.book(members.get(7), ts.getLessonById(8));
-        rs.addReview(b8, "Ok", 3);
+        bookings[6] = bs.book(members.get(6), ts.getLessonById(7));
+        bookings[6].setStatus("attended");
+        rs.addReview(bookings[6], "Satisfied", 4);
 
-        Booking b9 = bs.book(members.get(8), ts.getLessonById(9));
-        rs.addReview(b9, "Dissatisfied", 2);
+        bookings[7] = bs.book(members.get(7), ts.getLessonById(8));
+        bookings[7].setStatus("attended");
+        rs.addReview(bookings[7], "Ok", 3);
 
-        Booking b10 = bs.book(members.get(9), ts.getLessonById(10));
-        rs.addReview(b10, "Very dissatisfied", 1);
+        bookings[8] = bs.book(members.get(8), ts.getLessonById(9));
+        bookings[8].setStatus("attended");
+        rs.addReview(bookings[8], "Dissatisfied", 2);
 
-        Booking b11 = bs.book(members.get(0), ts.getLessonById(11));
-        rs.addReview(b11, "Very satisfied", 5);
+        bookings[9] = bs.book(members.get(9), ts.getLessonById(10));
+        bookings[9].setStatus("attended");
+        rs.addReview(bookings[9], "Very dissatisfied", 1);
 
-        Booking b12 = bs.book(members.get(1), ts.getLessonById(12));
-        rs.addReview(b12, "Satisfied", 4);
+        bookings[10] = bs.book(members.get(0), ts.getLessonById(11));
+        bookings[10].setStatus("attended");
+        rs.addReview(bookings[10], "Very satisfied", 5);
 
-        Booking b13 = bs.book(members.get(2), ts.getLessonById(13));
-        rs.addReview(b13, "Ok", 3);
+        bookings[11] = bs.book(members.get(1), ts.getLessonById(12));
+        bookings[11].setStatus("attended");
+        rs.addReview(bookings[11], "Satisfied", 4);
 
-        Booking b14 = bs.book(members.get(3), ts.getLessonById(14));
-        rs.addReview(b14, "Dissatisfied", 2);
+        bookings[12] = bs.book(members.get(2), ts.getLessonById(13));
+        bookings[12].setStatus("attended");
+        rs.addReview(bookings[12], "Ok", 3);
 
-        Booking b15 = bs.book(members.get(4), ts.getLessonById(15));
-        rs.addReview(b15, "Very dissatisfied", 1);
+        bookings[13] = bs.book(members.get(3), ts.getLessonById(14));
+        bookings[13].setStatus("attended");
+        rs.addReview(bookings[13], "Dissatisfied", 2);
 
-        Booking b16 = bs.book(members.get(5), ts.getLessonById(16));
-        rs.addReview(b16, "Very satisfied", 5);
+        bookings[14] = bs.book(members.get(4), ts.getLessonById(15));
+        bookings[14].setStatus("attended");
+        rs.addReview(bookings[14], "Very dissatisfied", 1);
 
-        Booking b17 = bs.book(members.get(6), ts.getLessonById(17));
-        rs.addReview(b17, "Satisfied", 4);
+        bookings[15] = bs.book(members.get(5), ts.getLessonById(16));
+        bookings[15].setStatus("attended");
+        rs.addReview(bookings[15], "Very satisfied", 5);
 
-        Booking b18 = bs.book(members.get(7), ts.getLessonById(18));
-        rs.addReview(b18, "Ok", 3);
+        bookings[16] = bs.book(members.get(6), ts.getLessonById(17));
+        bookings[16].setStatus("attended");
+        rs.addReview(bookings[16], "Satisfied", 4);
 
-        Booking b19 = bs.book(members.get(8), ts.getLessonById(19));
-        rs.addReview(b19, "Dissatisfied", 2);
+        bookings[17] = bs.book(members.get(7), ts.getLessonById(18));
+        bookings[17].setStatus("attended");
+        rs.addReview(bookings[17], "Ok", 3);
 
-        Booking b20 = bs.book(members.get(9), ts.getLessonById(20));
-        rs.addReview(b20, "Very dissatisfied", 1);
-    }
+        bookings[18] = bs.book(members.get(8), ts.getLessonById(19));
+        bookings[18].setStatus("attended");
+        rs.addReview(bookings[18], "Dissatisfied", 2);
 
-    public static void printAllMembers(List<Member> members) {
-        System.out.println("=== Members ===");
-        for (Member m : members) {
-            System.out.println("ID: " + m.getId() + " | Name: " + m.getName());
-        }
-    }
-
-    public static void printAllLessons(TimeTableService ts) {
-        System.out.println("\n=== Lessons ===");
-        for (Lesson l : ts.getAllLessons()) {
-            System.out.println("ID: " + l.getId() + " | Type: " + l.getType() +
-                    " | Day: " + l.getDay() + " | Slot: " + l.getSlot() +
-                    " | Price: $" + l.getPrice() +
-                    " | Booked: " + l.getBookings().size() + "/" + 4);
-        }
-    }
-
-    public static void printAllBookings(BookingService bs) {
-        System.out.println("\n=== Bookings ===");
-        for (Booking b : bs.getAll()) {
-            System.out.println("BookingID: " + b.getId() + " | Member: " + b.getMember().getName() +
-                    " | LessonID: " + b.getLesson().getId() + " | Status: " + b.getStatus() +
-                    (b.getReview() != null ? " | Rating: " + b.getReview().getRating() +
-                            " | Review: " + b.getReview().getComment() : ""));
-        }
+        bookings[19] = bs.book(members.get(9), ts.getLessonById(20));
+        bookings[19].setStatus("attended");
+        rs.addReview(bookings[19], "Very dissatisfied", 1);
     }
 }
