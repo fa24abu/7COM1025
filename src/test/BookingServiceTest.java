@@ -128,4 +128,24 @@ public class BookingServiceTest {
 
         assertEquals(1, newLesson.getBookings().size());
     }
+
+    @Test
+    void testCannotAttendCancelledBooking() {
+        Booking b = service.book(member, lesson);
+
+        service.cancel(b.getId());
+        service.attend(b.getId());
+
+        assertEquals("cancelled", b.getStatus());
+    }
+
+    @Test
+    void testAttendOnlyOnce() {
+        Booking b = service.book(member, lesson);
+
+        service.attend(b.getId());
+        service.attend(b.getId());
+
+        assertEquals("attended", b.getStatus());
+    }
 }

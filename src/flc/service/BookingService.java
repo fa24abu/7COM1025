@@ -83,11 +83,22 @@ public class BookingService {
         return true;
     }
 
-    public void attend(int id) {
-        Booking b = find(id);
-        if (b != null && !b.getStatus().equals("attended")) {
-            b.setStatus("attended");
+    public void attend(int bookingId) {
+        Booking b = find(bookingId);
+
+        if (b == null) return;
+
+        if (b.getStatus().equals("cancelled")) {
+            System.out.println("Cannot attend cancelled booking");
+            return;
         }
+
+        if (b.getStatus().equals("attended")) {
+            System.out.println("Already attended");
+            return;
+        }
+
+        b.setStatus("attended");
     }
 
     public Booking find(int id) {
