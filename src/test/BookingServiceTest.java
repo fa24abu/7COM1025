@@ -100,4 +100,15 @@ public class BookingServiceTest {
 
         assertEquals("cancelled", b.getStatus());
     }
+
+    @Test
+    void testSeatReleasedAfterCancel() {
+        Booking b = service.book(member, lesson);
+
+        assertEquals(1, lesson.getBookings().size());
+
+        service.cancel(b.getId());
+
+        assertEquals(0, lesson.getBookings().size());
+    }
 }
