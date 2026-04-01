@@ -63,4 +63,23 @@ public class BookingServiceTest {
         assertTrue(changed);
         assertEquals(newLesson, b.getLesson());
     }
+
+    @Test
+    void testStatusAfterChange() {
+        Booking b = service.book(member, lesson);
+
+        Lesson newLesson = new Lesson(
+                2,
+                ExerciseType.ZUMBA,
+                DayType.SUNDAY,
+                TimeSlot.EVENING,
+                12,
+                4
+        );
+
+        boolean changed = service.change(b.getId(), newLesson);
+
+        assertTrue(changed);
+        assertEquals("changed", b.getStatus());
+    }
 }
