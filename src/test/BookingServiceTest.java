@@ -82,4 +82,13 @@ public class BookingServiceTest {
         assertTrue(changed);
         assertEquals("changed", b.getStatus());
     }
+
+    @Test
+    void testStatusAfterAttend() {
+        Booking b = service.book(member, lesson);
+
+        service.attend(b.getId());
+
+        assertEquals("attended", b.getStatus());
+    }
 }
