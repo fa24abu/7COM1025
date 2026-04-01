@@ -111,4 +111,21 @@ public class BookingServiceTest {
 
         assertEquals(0, lesson.getBookings().size());
     }
+
+    @Test
+    void testSeatReleasedAfterChange() {
+        Lesson newLesson = new Lesson(2, ExerciseType.ZUMBA,
+                DayType.SUNDAY, TimeSlot.EVENING, 12, 4);
+
+        Booking b = service.book(member, lesson);
+
+        assertEquals(1, lesson.getBookings().size());
+        assertEquals(0, newLesson.getBookings().size());
+
+        service.change(b.getId(), newLesson);
+
+        assertEquals(0, lesson.getBookings().size());
+
+        assertEquals(1, newLesson.getBookings().size());
+    }
 }
