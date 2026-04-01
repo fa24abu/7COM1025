@@ -91,4 +91,13 @@ public class BookingServiceTest {
 
         assertEquals("attended", b.getStatus());
     }
+
+    @Test
+    void testStatusAfterCancel() {
+        Booking b = service.book(member, lesson);
+
+        service.cancel(b.getId());
+
+        assertEquals("cancelled", b.getStatus());
+    }
 }
