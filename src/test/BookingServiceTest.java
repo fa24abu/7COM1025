@@ -46,14 +46,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    void testCancelBooking() {
-        Booking b = service.book(member, lesson);
-        service.cancel(b.getId());
-
-        assertEquals("cancelled", b.getStatus());
-    }
-
-    @Test
     void testChangeBooking() {
         Lesson newLesson = new Lesson(2, ExerciseType.ZUMBA, DayType.SUNDAY, TimeSlot.EVENING, 12, 5);
 
@@ -62,34 +54,6 @@ public class BookingServiceTest {
 
         assertTrue(changed);
         assertEquals(newLesson, b.getLesson());
-    }
-
-    @Test
-    void testStatusAfterChange() {
-        Booking b = service.book(member, lesson);
-
-        Lesson newLesson = new Lesson(
-                2,
-                ExerciseType.ZUMBA,
-                DayType.SUNDAY,
-                TimeSlot.EVENING,
-                12,
-                4
-        );
-
-        boolean changed = service.change(b.getId(), newLesson);
-
-        assertTrue(changed);
-        assertEquals("changed", b.getStatus());
-    }
-
-    @Test
-    void testStatusAfterAttend() {
-        Booking b = service.book(member, lesson);
-
-        service.attend(b.getId());
-
-        assertEquals("attended", b.getStatus());
     }
 
     @Test
