@@ -8,6 +8,12 @@ import java.util.List;
 
 public class DataInitializer {
 
+    private static final String VERY_SATISFIED = "Very satisfied";
+    private static final String SATISFIED = "Satisfied";
+    private static final String OK = "Ok";
+    private static final String DISSATISFIED = "Dissatisfied";
+    private static final String VERY_DISSATISFIED = "Very dissatisfied";
+
     public static List<Member> createMembers() {
         List<Member> list = new ArrayList<>();
 
@@ -93,82 +99,82 @@ public class DataInitializer {
 
         bookings[0] = bs.book(members.get(0), ts.getLessonById(1));
         bookings[0].setStatus("attended");
-        rs.addReview(bookings[0], "Very satisfied", 5);
+        rs.addReview(bookings[0], VERY_SATISFIED, 5);
 
         bookings[1] = bs.book(members.get(1), ts.getLessonById(2));
         bookings[1].setStatus("attended");
-        rs.addReview(bookings[1], "Satisfied", 4);
+        rs.addReview(bookings[1], SATISFIED, 4);
 
         bookings[2] = bs.book(members.get(2), ts.getLessonById(3));
         bookings[2].setStatus("attended");
-        rs.addReview(bookings[2], "Ok", 3);
+        rs.addReview(bookings[2], OK, 3);
 
         bookings[3] = bs.book(members.get(3), ts.getLessonById(4));
         bookings[3].setStatus("attended");
-        rs.addReview(bookings[3], "Dissatisfied", 2);
+        rs.addReview(bookings[3], DISSATISFIED, 2);
 
         bookings[4] = bs.book(members.get(4), ts.getLessonById(5));
         bookings[4].setStatus("attended");
-        rs.addReview(bookings[4], "Very dissatisfied", 1);
+        rs.addReview(bookings[4], VERY_DISSATISFIED, 1);
 
         bookings[5] = bs.book(members.get(5), ts.getLessonById(6));
         bookings[5].setStatus("attended");
-        rs.addReview(bookings[5], "Very satisfied", 5);
+        rs.addReview(bookings[5], VERY_SATISFIED, 5);
 
         bookings[6] = bs.book(members.get(6), ts.getLessonById(7));
         bookings[6].setStatus("attended");
-        rs.addReview(bookings[6], "Satisfied", 4);
+        rs.addReview(bookings[6], SATISFIED, 4);
 
         bookings[7] = bs.book(members.get(7), ts.getLessonById(8));
         bookings[7].setStatus("attended");
-        rs.addReview(bookings[7], "Ok", 3);
+        rs.addReview(bookings[7], OK, 3);
 
         bookings[8] = bs.book(members.get(8), ts.getLessonById(9));
         bookings[8].setStatus("attended");
-        rs.addReview(bookings[8], "Dissatisfied", 2);
+        rs.addReview(bookings[8], DISSATISFIED, 2);
 
         bookings[9] = bs.book(members.get(9), ts.getLessonById(10));
         bookings[9].setStatus("attended");
-        rs.addReview(bookings[9], "Very dissatisfied", 1);
+        rs.addReview(bookings[9], VERY_DISSATISFIED, 1);
 
         bookings[10] = bs.book(members.get(0), ts.getLessonById(11));
         bookings[10].setStatus("attended");
-        rs.addReview(bookings[10], "Very satisfied", 5);
+        rs.addReview(bookings[10], VERY_SATISFIED, 5);
 
         bookings[11] = bs.book(members.get(1), ts.getLessonById(12));
         bookings[11].setStatus("attended");
-        rs.addReview(bookings[11], "Satisfied", 4);
+        rs.addReview(bookings[11], SATISFIED, 4);
 
         bookings[12] = bs.book(members.get(2), ts.getLessonById(13));
         bookings[12].setStatus("attended");
-        rs.addReview(bookings[12], "Ok", 3);
+        rs.addReview(bookings[12], OK, 3);
 
         bookings[13] = bs.book(members.get(3), ts.getLessonById(14));
         bookings[13].setStatus("attended");
-        rs.addReview(bookings[13], "Dissatisfied", 2);
+        rs.addReview(bookings[13], DISSATISFIED, 2);
 
         bookings[14] = bs.book(members.get(4), ts.getLessonById(15));
         bookings[14].setStatus("attended");
-        rs.addReview(bookings[14], "Very dissatisfied", 1);
+        rs.addReview(bookings[14], VERY_DISSATISFIED, 1);
 
         bookings[15] = bs.book(members.get(5), ts.getLessonById(16));
         bookings[15].setStatus("attended");
-        rs.addReview(bookings[15], "Very satisfied", 5);
+        rs.addReview(bookings[15], VERY_SATISFIED, 5);
 
         bookings[16] = bs.book(members.get(6), ts.getLessonById(17));
         bookings[16].setStatus("attended");
-        rs.addReview(bookings[16], "Satisfied", 4);
+        rs.addReview(bookings[16], SATISFIED, 4);
 
         bookings[17] = bs.book(members.get(7), ts.getLessonById(18));
         bookings[17].setStatus("attended");
-        rs.addReview(bookings[17], "Ok", 3);
+        rs.addReview(bookings[17], OK, 3);
 
         bookings[18] = bs.book(members.get(8), ts.getLessonById(19));
         bookings[18].setStatus("attended");
-        rs.addReview(bookings[18], "Dissatisfied", 2);
+        rs.addReview(bookings[18], DISSATISFIED, 2);
 
         bookings[19] = bs.book(members.get(9), ts.getLessonById(20));
         bookings[19].setStatus("attended");
-        rs.addReview(bookings[19], "Very dissatisfied", 1);
+        rs.addReview(bookings[19], VERY_DISSATISFIED, 1);
     }
 }
