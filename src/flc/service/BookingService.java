@@ -11,11 +11,11 @@ public class BookingService {
     private int counter = 1;
 
     public Booking book(Member m, Lesson l) {
-
+ 
         for (Booking b : bookings) {
             if (b.getMember().getId() == m.getId()
                     && b.getLesson().getId() == l.getId()
-                    && !b.getStatus().equals("cancelled")) {
+                    && !b.getStatus().equals(BookingStatus.CANCELLED)) {
                 System.out.println("Duplicate booking!");
                 return null;
             }
@@ -27,7 +27,7 @@ public class BookingService {
         }
 
         Booking b = new Booking(counter++, m, l);
-        b.setStatus("booked");
+        b.setStatus(BookingStatus.BOOKED);
         bookings.add(b);
         l.addBooking(b);
         return b;
@@ -41,13 +41,13 @@ public class BookingService {
             return;
         }
 
-        if (b.getStatus().equals("attended")) {
+        if (b.getStatus().equals(BookingStatus.ATTENDED)) {
             System.out.println("Cannot cancel attended booking!");
             return;
         }
 
         b.getLesson().removeBooking(b);
-        b.setStatus("cancelled");
+        b.setStatus(BookingStatus.CANCELLED);
     }
 
     public boolean change(int id, Lesson newLesson) {
@@ -61,7 +61,7 @@ public class BookingService {
         for (Booking existing : bookings) {
             if (existing.getMember().getId() == b.getMember().getId()
                     && existing.getLesson().getId() == newLesson.getId()
-                    && !existing.getStatus().equals("cancelled")
+                    && !existing.getStatus().equals(BookingStatus.CANCELLED)
                     && existing.getId() != b.getId()) {
                 System.out.println("Cannot change: duplicate booking would occur!");
                 return false;
@@ -78,7 +78,7 @@ public class BookingService {
         b.setLesson(newLesson);
         newLesson.addBooking(b);
 
-        b.setStatus("changed");
+        b.setStatus(BookingStatus.CHANGED);
         System.out.println("Booking changed successfully. Booking ID remains: " + b.getId());
         return true;
     }
@@ -88,17 +88,17 @@ public class BookingService {
 
         if (b == null) return;
 
-        if (b.getStatus().equals("cancelled")) {
+        if (b.getStatus().equals(BookingStatus.CANCELLED)) {
             System.out.println("Cannot attend cancelled booking");
             return;
         }
 
-        if (b.getStatus().equals("attended")) {
+        if (b.getStatus().equals(BookingStatus.ATTENDED)) {
             System.out.println("Already attended");
             return;
         }
 
-        b.setStatus("attended");
+        b.setStatus(BookingStatus.ATTENDED);
     }
 
     public Booking find(int id) {
