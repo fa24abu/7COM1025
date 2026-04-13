@@ -19,7 +19,7 @@ public class ReportService {
             int ratingTotal = 0;
 
             for (Booking b : l.getBookings()) {
-                if (b.getStatus().equals("attended")) {
+                if (b.getStatus().equals(BookingStatus.ATTENDED)) {
                     attendedCount++;
 
                     if (b.getReview() != null)
@@ -52,7 +52,7 @@ public class ReportService {
             double income = 0;
 
             for (Booking b : l.getBookings()) {
-                if (b.getStatus().equals("attended")) {
+                if (b.getStatus().equals(BookingStatus.ATTENDED)) {
                     income += l.getPrice();
                 }
             }
