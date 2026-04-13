@@ -8,7 +8,7 @@ public class ReviewService {
 
         if (booking == null) return;
 
-        if (!booking.getStatus().equals("attended")) {
+        if (!booking.getStatus().equals(BookingStatus.ATTENDED)) {
             System.out.println("You must attend lesson before reviewing!");
             return;
         }
