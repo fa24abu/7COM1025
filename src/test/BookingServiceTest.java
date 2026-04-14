@@ -24,7 +24,7 @@ public class BookingServiceTest {
         Booking b = service.book(member, lesson);
 
         assertNotNull(b);
-        assertEquals("booked", b.getStatus());
+        assertEquals(BookingStatus.BOOKED, b.getStatus());
     }
 
     @Test
@@ -62,7 +62,7 @@ public class BookingServiceTest {
 
         service.cancel(b.getId());
 
-        assertEquals("cancelled", b.getStatus());
+        assertEquals(BookingStatus.CANCELLED, b.getStatus());
     }
 
     @Test
@@ -100,7 +100,7 @@ public class BookingServiceTest {
         service.cancel(b.getId());
         service.attend(b.getId());
 
-        assertEquals("cancelled", b.getStatus());
+        assertEquals(BookingStatus.CANCELLED, b.getStatus());
     }
 
     @Test
@@ -110,6 +110,6 @@ public class BookingServiceTest {
         service.attend(b.getId());
         service.attend(b.getId());
 
-        assertEquals("attended", b.getStatus());
+        assertEquals(BookingStatus.ATTENDED, b.getStatus());
     }
 }
